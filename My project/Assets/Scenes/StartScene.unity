@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 750206269}
   - component: {fileID: 750206268}
   - component: {fileID: 750206267}
+  - component: {fileID: 750206271}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -177,7 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8840885adf00cfc488d5babff9b2cd34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatMovement
-  moveSpeed: 5
 --- !u!212 &750206269
 SpriteRenderer:
   serializedVersion: 2
@@ -252,6 +252,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &750206271
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750206266}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.21133333}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!1 &852644986
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,8 +319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   timer: 0
-  cheeseNum: 0
-  ratSpeed: 0
+  cheeseNum: 5
+  restCheese: 0
+  ratSpeed: 1
   mouseSpeed: 0
   canCapture: 0
 --- !u!4 &852644988
@@ -293,6 +331,54 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852644986}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1560977803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560977805}
+  - component: {fileID: 1560977804}
+  m_Layer: 0
+  m_Name: CheeseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1560977804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560977803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1875190b09da00e488193a43965fecc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheeseManager
+  cheesePrefab: {fileID: 2885400075928154424, guid: 5afcc522886644847a492f9021ba83be, type: 3}
+  cheeseRadius: 0.5
+  padding: 0.1
+  maxAttempts: 100
+--- !u!4 &1560977805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560977803}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -400,3 +486,4 @@ SceneRoots:
   - {fileID: 1718034109}
   - {fileID: 852644988}
   - {fileID: 750206270}
+  - {fileID: 1560977805}

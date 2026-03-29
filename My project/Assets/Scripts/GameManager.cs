@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [Header ("Game")]
     public float timer;
     public int cheeseNum;
+    public int restCheese;
 
     [Header ("Rat")]
     public float ratSpeed;

@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class RatMovement : MonoBehaviour
 {
-    [Header("이동 설정")]
-    [SerializeField] private float moveSpeed = 5f;
 
     private Rigidbody2D rigid;
     private Vector2 moveInput;
@@ -24,6 +22,13 @@ public class RatMovement : MonoBehaviour
     }
 
     void MoveRat() {
-        rigid.linearVelocity = moveInput * moveSpeed;
+        rigid.linearVelocity = moveInput * GameManager.Instance.ratSpeed;
+    }
+
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.name == "Cheese"){
+            Destroy(other.gameObject);
+            GameManager.Instance.restCheese--;
+        }
     }
 }
