@@ -21,4 +21,11 @@ public class StartSceneButton : MonoBehaviour
         }
 
     }
+
+    public void OnClickSettingExitButton(){
+        if(settingPanel.activeSelf){
+            settingPanel.SetActive(false);
+            normalPanel.SetActive(true);
+        }
+    }
 }
