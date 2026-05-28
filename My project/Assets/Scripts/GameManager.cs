@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     
     public bool canCapture = false;
 
+    public bool captured = false;
+
     private void Awake()
     {
         // 씬이 바뀌어도 GameManager가 파괴되지 않도록 유지

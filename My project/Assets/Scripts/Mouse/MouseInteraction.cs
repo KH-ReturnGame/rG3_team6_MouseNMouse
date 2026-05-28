@@ -41,6 +41,7 @@ public class MouseInteraction : MonoBehaviour
                 if (GameManager.Instance.canCapture)
                 {
                     Debug.Log("쥐를 잡았습니다! 마우스 승리!");
+                    GameManager.Instance.captured = true;
                     SceneManager.LoadScene("GameOver");
                     // 2주차 씬 이동 로직 예정
                 }

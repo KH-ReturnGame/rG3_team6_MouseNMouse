@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RatMovement : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class RatMovement : MonoBehaviour
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + objectHeight, maxBounds.y - objectHeight);
 
         transform.position = new Vector2(clampedX, clampedY);
+        
     }
 
     void FixedUpdate() {
@@ -41,6 +43,10 @@ public class RatMovement : MonoBehaviour
         if(other.gameObject.name == "Cheese"){
             Destroy(other.gameObject);
             GameManager.Instance.restCheese--;
+            if(GameManager.Instance.restCheese <= 0){
+            GameManager.Instance.captured = false;
+            SceneManager.LoadScene("GameOver");
+        }
         }
     }
 }
