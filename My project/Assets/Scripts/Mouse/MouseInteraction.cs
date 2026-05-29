@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MouseInteraction : MonoBehaviour
 {
-    public float interactionTime = 1.5f; 
+    public float interactionTime = 0.5f; 
     private float currentHoldTime = 0f;  
     private GameObject targetNail;       
 

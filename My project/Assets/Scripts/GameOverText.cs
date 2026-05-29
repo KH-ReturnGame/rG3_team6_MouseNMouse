@@ -23,7 +23,7 @@ public class GameOverText : MonoBehaviour
     }
 
     void Update(){
-        if(Input.anyKeyDown){
+        if(Input.GetKeyDown(KeyCode.Space)){
             SceneManager.LoadScene("StartScene");
         }
     }

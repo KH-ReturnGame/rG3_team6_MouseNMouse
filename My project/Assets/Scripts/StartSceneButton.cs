@@ -5,13 +5,15 @@ public class StartSceneButton : MonoBehaviour
 {
     public GameObject normalPanel;
     public GameObject settingPanel;
+    public int speed;
 
     void Start(){
         normalPanel.SetActive(true);
         settingPanel.SetActive(false);
     }
-    public void OnClickStartButton(){
-        SceneManager.LoadScene("GameScene");
+    public void OnClickStartButton()
+    {
+        GameManager.Instance.ChangeToGameScene(speed, 60);
     }
 
     public void OnClickSettingButton(){

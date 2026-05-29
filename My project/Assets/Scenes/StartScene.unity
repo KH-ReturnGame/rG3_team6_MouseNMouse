@@ -1912,9 +1912,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   ratSpeed: 5
   gameTime: 60
-  cheeseNum: 10
+  cheeseNum: 15
   restCheese: 10
   canCapture: 0
+  captured: 0
 --- !u!4 &1387567580
 Transform:
   m_ObjectHideFlags: 0
@@ -2500,6 +2501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StartSceneButton
   normalPanel: {fileID: 206886822}
   settingPanel: {fileID: 282941109}
+  speed: 10
 --- !u!4 &1723750797
 Transform:
   m_ObjectHideFlags: 0
