@@ -5,7 +5,6 @@ public class StartSceneButton : MonoBehaviour
 {
     public GameObject normalPanel;
     public GameObject settingPanel;
-    public int speed;
 
     void Start(){
         normalPanel.SetActive(true);
@@ -13,7 +12,7 @@ public class StartSceneButton : MonoBehaviour
     }
     public void OnClickStartButton()
     {
-        GameManager.Instance.ChangeToGameScene(speed, 60);
+        GameManager.Instance.ChangeToGameScene(GameManager.Instance.ratSpeed, GameManager.Instance.gameTime);
     }
 
     public void OnClickSettingButton(){
