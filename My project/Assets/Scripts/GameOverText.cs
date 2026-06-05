@@ -14,11 +14,11 @@ public class GameOverText : MonoBehaviour
         // GameManager의 captured 값에 따라 텍스트 설정
         if (GameManager.Instance.captured)
         {
-            gameOverText.text = "mouse win \n ->";
+            gameOverText.text = "마우스 승리!";
         }
         else
         {
-            gameOverText.text = "mouse win \n <-";
+            gameOverText.text = "쥐 승리!";
         }
     }
 

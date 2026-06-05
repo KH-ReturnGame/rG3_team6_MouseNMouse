@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5470910454238135046}
   - component: {fileID: 2174787171032734564}
-  - component: {fileID: 2657205035676001194}
+  - component: {fileID: -2636548896271690320}
   m_Layer: 0
   m_Name: cheese
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6582011127417039112, guid: 6f102bd49d7513246b10b18dc2cd8cb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &2657205035676001194
+--- !u!58 &-2636548896271690320
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,4 +127,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 9.5
