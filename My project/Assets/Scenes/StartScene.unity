@@ -2151,6 +2151,9 @@ MonoBehaviour:
   cheeseNum: {fileID: 1567495773}
   ratSpeed: {fileID: 2002793591}
   timer: {fileID: 1720817728}
+  CheeseNum: {fileID: 398551860}
+  RatSpeed: {fileID: 1885092039}
+  Timer: {fileID: 49797218}
 --- !u!4 &1558740327
 Transform:
   m_ObjectHideFlags: 0
