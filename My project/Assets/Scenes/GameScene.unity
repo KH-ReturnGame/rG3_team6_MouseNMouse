@@ -193,12 +193,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bbeee4ca0eb5114fad20713f3a6129c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  timer: 0
+  ratSpeed: 5
+  gameTime: 60
   cheeseNum: 5
   restCheese: 0
-  ratSpeed: 5
-  mouseSpeed: 0
   canCapture: 0
+  captured: 0
 --- !u!4 &852644988
 Transform:
   m_ObjectHideFlags: 0
@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 1718034109}
   - component: {fileID: 1718034108}
   - component: {fileID: 1718034107}
+  - component: {fileID: 1718034110}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -323,7 +324,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -354,6 +355,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1718034110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718034106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1780765039
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,8 +428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b23ab182d4195d4da964552385b75e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  rat: {fileID: 8715910716936064226, guid: e30272abfbf92074a9eeecfa9c890f2c, type: 3}
-  box: {fileID: 4283634032732919163, guid: 3b3a4b0ff7fcd5b4895dbc4574978d4c, type: 3}
+  ratPrefab: {fileID: 8715910716936064226, guid: e30272abfbf92074a9eeecfa9c890f2c, type: 3}
+  realBoxPrefab: {fileID: 4283634032732919163, guid: 3b3a4b0ff7fcd5b4895dbc4574978d4c, type: 3}
+  fakeBoxPrefab: {fileID: 4283634032732919163, guid: 1695082424386384d9cc187d443efaf7, type: 3}
+  fakeBoxCount: 3
 --- !u!4 &1780765041
 Transform:
   m_ObjectHideFlags: 0

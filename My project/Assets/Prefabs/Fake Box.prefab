@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7293311305982901704}
   - component: {fileID: 7741487066805705586}
   m_Layer: 0
-  m_Name: Nail (2)
+  m_Name: Fake Nail (2)
   m_TagString: Nail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 5634392964345146398}
   - component: {fileID: 7342977516248479739}
   m_Layer: 2
-  m_Name: BoxGroup
+  m_Name: Fake Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,7 +206,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 108405947119602286}
   - component: {fileID: 4433264898797052734}
   m_Layer: 0
-  m_Name: Nail (3)
+  m_Name: Fake Nail (3)
   m_TagString: Nail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 1967183638712574553}
   - component: {fileID: 4886128282698435170}
   m_Layer: 0
-  m_Name: Nail
+  m_Name: Fake Nail
   m_TagString: Nail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 6316248027462902988}
   - component: {fileID: 4082758325716130929}
   m_Layer: 0
-  m_Name: Nail (1)
+  m_Name: Fake Nail (1)
   m_TagString: Nail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
