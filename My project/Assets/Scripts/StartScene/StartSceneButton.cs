@@ -12,6 +12,7 @@ public class StartSceneButton : MonoBehaviour
     }
     public void OnClickStartButton()
     {
+        GameManager.Instance.restTime = GameManager.Instance.gameTime;
         GameManager.Instance.ChangeToGameScene(GameManager.Instance.ratSpeed, GameManager.Instance.gameTime);
     }
 

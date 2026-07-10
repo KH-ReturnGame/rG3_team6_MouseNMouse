@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     // 게임에서 사용할 전역 변수들
     public float ratSpeed = 5f;
     public float gameTime = 60f;
+    public float restTime;
     public int cheeseNum = 10;
     
     // RatMovement.cs에서 치즈를 먹을 때마다 깎일 변수

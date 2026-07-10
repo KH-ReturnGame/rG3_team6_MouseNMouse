@@ -9,7 +9,8 @@ public class Spawner : MonoBehaviour
     
     [Header("소환 설정")]
     [Range(1, 10)]
-    public int fakeBoxCount = 3; // 생성할 가짜 상자의 개수
+    public int fakeBoxCount = 2; // 생성할 가짜 상자의 개수
+    public int realBoxCount = 2;
 
     void Start()
     {
@@ -19,7 +20,8 @@ public class Spawner : MonoBehaviour
         Instantiate(ratPrefab, Vector3.zero, Quaternion.identity);
 
         // 2. 진짜 상자 1개 생성 (화면 내 랜덤 위치)
-        SpawnAtRandomViewport(realBoxPrefab, cam);
+        for(int i = 0;i < realBoxCount;i++)
+            SpawnAtRandomViewport(realBoxPrefab, cam);
 
         // 3. 가짜 상자들 생성 (화면 내 랜덤 위치)
         for (int i = 0; i < fakeBoxCount; i++)

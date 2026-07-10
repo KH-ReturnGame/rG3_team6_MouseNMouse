@@ -57,13 +57,13 @@ public class BoxController : MonoBehaviour
         if (isReal)
         {
             GameManager.Instance.canCapture = true;
-            if (bodyRenderer != null) bodyRenderer.color = new Color(1, 1, 1, 0.5f);
+            if (bodyRenderer != null) bodyRenderer.color = new Color(1, 1, 1, 1f);
             Debug.Log("★진짜 상자! 이제 쥐를 잡으세요!");
         }
         else
         {
             // 가짜 상자는 붉은색으로 변하게 처리
-            if (bodyRenderer != null) bodyRenderer.color = new Color(1, 0.5f, 0.5f, 0.5f);
+            if (bodyRenderer != null) bodyRenderer.color = new Color(1, 1f, 1f, 1f);
             Debug.Log("꽝! 가짜였습니다.");
         }
     }
