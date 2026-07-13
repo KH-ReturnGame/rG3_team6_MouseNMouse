@@ -54,6 +54,10 @@ public class MouseInteraction : MonoBehaviour
             {
                 Debug.Log("쥐를 잡았습니다! 마우스 승리!");
                 GameManager.Instance.captured = true;
+                
+                // ★ [추가] 씬이 넘어가기 직전에 GameManager에게 효과음 재생을 명령합니다!
+                GameManager.Instance.PlayCaptureSound();
+
                 SceneManager.LoadScene("GameOver");
                 return;
             }

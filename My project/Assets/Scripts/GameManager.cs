@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
 
     public bool captured = false;
 
+    [Header("사운드 설정")]
+    public AudioSource sfxSource;   // 효과음을 낼 오디오 소스 컴포넌트
+    public AudioClip captureSound;  // 쥐 잡을 때 날 효과음 파일(AudioClip)
+
     private void Awake()
     {
         // 씬이 바뀌어도 GameManager가 파괴되지 않도록 유지
@@ -43,5 +47,14 @@ public class GameManager : MonoBehaviour
 
         // 게임 씬으로 이동
         SceneManager.LoadScene("GameScene"); 
+    }
+
+    // 쥐를 잡았을 때 효과음을 1회 재생해주는 함수
+    public void PlayCaptureSound()
+    {
+        if (sfxSource != null && captureSound != null)
+        {
+            sfxSource.PlayOneShot(captureSound);
+        }
     }
 }
