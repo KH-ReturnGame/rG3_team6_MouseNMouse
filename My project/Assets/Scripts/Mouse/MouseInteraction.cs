@@ -17,10 +17,8 @@ public class MouseInteraction : MonoBehaviour
     
     private float lastMissTime = -100f;  // 마지막으로 헛손질(실패)한 시간
 
-    public Slider cooldown;
 
     void Start(){
-        cooldown.enabled = false;
     }
     void Update()
     {
@@ -30,7 +28,6 @@ public class MouseInteraction : MonoBehaviour
             HandleClick();
         }
 
-        cooldown.value -= Time.deltaTime;
     }
 
     void HandleClick()
@@ -76,9 +73,6 @@ public class MouseInteraction : MonoBehaviour
             if (!isCoolingDown)
             {
                 lastMissTime = Time.time;
-                cooldown.enabled = true;
-                cooldown.value = 10;
-                Debug.Log("헛손질! 쥐를 놓쳤습니다. 1초 동안 포획 불가 패널티!");
             }
         }
 

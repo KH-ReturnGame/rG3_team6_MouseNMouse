@@ -5,10 +5,12 @@ public class StartSceneButton : MonoBehaviour
 {
     public GameObject normalPanel;
     public GameObject settingPanel;
+    public GameObject howToPlay;
 
     void Start(){
         normalPanel.SetActive(true);
         settingPanel.SetActive(false);
+        howToPlay.SetActive(false);
     }
     public void OnClickStartButton()
     {
@@ -32,6 +34,16 @@ public class StartSceneButton : MonoBehaviour
     }
 
     public void OnClickHowToPlayButton(){
-        
+        if(!howToPlay.activeSelf){
+            howToPlay.SetActive(true);
+            normalPanel.SetActive(false);
+        }
+    }
+
+    public void OnClickHowToPlayExitButton(){
+        if(howToPlay.activeSelf){
+            howToPlay.SetActive(false);
+            normalPanel.SetActive(true);
+        }
     }
 }
